@@ -20,7 +20,7 @@ class CardsCustom extends StatelessWidget {
     return Stack(children: [
       Container(
         decoration: BoxDecoration(
-            color:const Color.fromARGB(255, 255, 255, 255),
+            color: const Color.fromARGB(255, 255, 255, 255),
             borderRadius: BorderRadius.circular(5)),
         width: double.infinity,
         child: Padding(
@@ -51,14 +51,12 @@ class CardsCustom extends StatelessWidget {
                   Text(
                     text1,
                     style: const TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w400),
+                        fontSize: 30, fontWeight: FontWeight.w400),
                   ),
                   Text(
                     text2,
                     style: const TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w400),
+                        fontSize: 30, fontWeight: FontWeight.w400),
                   ),
                 ],
               )
@@ -85,5 +83,38 @@ class CardsCustom extends StatelessWidget {
             )),
       )
     ]);
+  }
+}
+
+class CustomBox extends StatelessWidget {
+   Widget? first;
+   Widget? second;
+  final Color color;
+   CustomBox({Key? key, this.first, this.second,required this.color}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 170,
+      height: 90,
+      child: DecoratedBox(
+        child: Padding(
+          padding: const EdgeInsets.only(left: 12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              first!,
+             const SizedBox(
+                height: 6,
+              ),
+              second!,
+            ],
+          ),
+        ),
+        decoration: BoxDecoration(
+            color: color, borderRadius: BorderRadius.circular(8)),
+      ),
+    );
   }
 }

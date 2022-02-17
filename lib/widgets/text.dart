@@ -2,27 +2,29 @@ import 'package:flutter/material.dart';
 
 class HeadText extends StatelessWidget {
   final String data;
-  const HeadText({Key? key, required this.data}) : super(key: key);
+  Color? color;
+   HeadText({Key? key, required this.data,this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Text(
       data,
-      style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+      style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500,color: color),
     );
   }
 }
 
 class ContentText extends StatelessWidget {
   final String data;
-  ContentText({Key? key, required this.data}) : super(key: key);
+  Color? color;
+  ContentText({Key? key, required this.data,this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Text(
       data,
-      style: const TextStyle(
-          color: Color.fromARGB(255, 95, 93, 93),
+      style: TextStyle(
+          color: color,
           fontSize: 20,
           fontWeight: FontWeight.normal),
     );
