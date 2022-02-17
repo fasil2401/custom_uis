@@ -2,6 +2,7 @@ import 'package:custom/widgets/button.dart';
 import 'package:custom/widgets/cards.dart';
 import 'package:custom/widgets/divider.dart';
 import 'package:custom/widgets/list_ile.dart';
+import 'package:custom/widgets/product_tile.dart';
 import 'package:custom/widgets/text.dart';
 import 'package:flutter/material.dart';
 
@@ -149,79 +150,52 @@ class Payments extends StatelessWidget {
                   )
                 ],
               ),
-             const SizedBox(height: 20,),
-              SizedBox(
-                width: double.infinity,
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(width: 1,color: Colors.grey),
-                            borderRadius: BorderRadius.circular(5)
-                          ),
-                          height: 65,
-                          width: 65,
-                          child: Padding(
-                            padding: const EdgeInsets.all(4),
-                            child: FittedBox(
-                              fit: BoxFit.contain,
-                              child: ClipRRect(
-                                child: Image.network('https://rukminim1.flixcart.com/image/800/960/kc9eufk0/sari/n/e/7/free-arohi-rudra-fashion-unstitched-original-imaftfgs2775ehe5.jpeg?q=50'),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+              const SizedBox(
+                height: 10,
+              ),
+              
+             const ProductTile(
+                  orderid: '1688098',
+                  month: 'jan',
+                  price: '233.30',
+                  imageurl:
+                      'https://rukminim1.flixcart.com/image/800/960/kc9eufk0/sari/n/e/7/free-arohi-rudra-fashion-unstitched-original-imaftfgs2775ehe5.jpeg?q=50'),
+                     const DividerCustom(),
+                                  const ProductTile(
+                  orderid: '1688025',
+                  month: 'jul',
+                  price: '799',
+                  imageurl:
+                      'https://rukminim1.flixcart.com/image/800/960/kyvvtzk0/shoe/1/p/8/8-5-cw3411-007nike-9-5-nike-cool-grey-hyper-crimson-lt-smoke-original-imagbyhgjzkjz9kg.jpeg?q=50'),
+             const DividerCustom(),
+             const ProductTile(
+                  orderid: '1688032',
+                  month: 'may',
+                  price: '1000',
+                  imageurl:
+                      'https://rukminim1.flixcart.com/image/800/960/krjjde80/slipper-flip-flop/k/s/v/10-dd0234-400nike-nike-racer-blue-white-black-original-imag5b2y4f9qseqh.jpeg?q=50'),
+             const DividerCustom(),
+             const ProductTile(
+                  orderid: '1688045',
+                  month: 'jun',
+                  price: '2500',
+                  imageurl:
+                      'https://rukminim1.flixcart.com/image/416/416/ku1k4280/smartwatch/t/i/a/android-ios-wrb-sw-colorfitqubeoxy-std-blk-blk-noise-no-original-imag79y4ar4hjbgb.jpeg?q=70'),
+             const DividerCustom(),
+             const ProductTile(
+                  orderid: '1688055',
+                  month: 'jan',
+                  price: '1500',
+                  imageurl:
+                      'https://rukminim1.flixcart.com/image/800/960/kz3118w0/sari/1/p/y/free-sari-saree-fancy-embroidery-sadi-latest-new-designer-party-original-imagb6gh2utnc3xn.jpeg?q=50'),
+             const DividerCustom(),
+             const ProductTile(
+                  orderid: '1688088',
+                  month: 'feb',
+                  price: '2650',
+                  imageurl:
+                      'https://rukminim1.flixcart.com/image/416/416/kjlrb0w0-0/headphone/n/k/9/air-buds-truly-wireless-noise-original-imafz4u28vvn68kp.jpeg?q=70'),
 
-                            children: [           
-                              Text('Order #1688068',
-                              style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black,
-                              ),),
-                              SizedBox(height: 6,),
-                              ContentText(data: 'Jul 12, 02:06 PM')
-                            ],
-                          ),
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text('₹799',
-                              style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.blue,
-                              ),),
-                              Row(
-                                mainAxisSize:MainAxisSize.min,
-                                children: [
-                                  Icon(Icons.circle,size: 15,color: Colors.green,),
-                                  SizedBox(width: 5,),
-                                  Text('Successful',
-                                  style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w500,
-                                color: Color.fromARGB(255, 107, 105, 105),
-                              ),)
-                                ],
-                              )
-                          ],
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              )
             ],
           ),
         ),
