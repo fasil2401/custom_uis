@@ -1,3 +1,4 @@
+import 'package:custom/screens/first.dart';
 import 'package:custom/widgets/bottom_navigation.dart';
 import 'package:custom/widgets/cards.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,12 @@ class ManageStore extends StatelessWidget {
     return  Scaffold(
       backgroundColor:const Color.fromARGB(255, 230, 227, 227),
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>AdditionalInformation()));
+          },
+        ),
         title: const Text('Manage Store',
         style: TextStyle(
           fontSize: 22

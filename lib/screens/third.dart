@@ -1,3 +1,4 @@
+import 'package:custom/screens/second.dart';
 import 'package:custom/widgets/button.dart';
 import 'package:custom/widgets/cards.dart';
 import 'package:custom/widgets/divider.dart';
@@ -15,7 +16,9 @@ class Payments extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>ManageStore()));
+          },
         ),
         title: const Text(
           'Payments',
