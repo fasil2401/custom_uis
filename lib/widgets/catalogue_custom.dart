@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:custom/widgets/divider.dart';
+import 'package:custom/widgets/text.dart';
 class CatalogueCustom extends StatefulWidget {
   final String productname;
   final String price;
   final String imageurl;
 
-const CatalogueCustom({Key? key,required this.productname,required this.price,required this.imageurl}) : super(key: key);
+ CatalogueCustom({Key? key,required this.productname,required this.price,required this.imageurl}) : super(key: key);
 
   @override
   State<CatalogueCustom> createState() => _CatalogueCustomState();
@@ -158,5 +159,112 @@ bool isSwitched = false;
             )
           ]),
         ));
+  }
+}
+class OrderBlock extends StatelessWidget {
+  const OrderBlock({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return  SizedBox(
+                width: double.infinity,
+                child: Column(children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                width: 1,
+                                color:
+                                    const Color.fromARGB(255, 235, 234, 234)),
+                            borderRadius: BorderRadius.circular(5)),
+                        height: 100,
+                        width: 100,
+                        child: Padding(
+                          padding: const EdgeInsets.all(4),
+                          child: FittedBox(
+                            fit: BoxFit.contain,
+                            child: ClipRRect(
+                              child: Image.network(
+                                  'https://rukminim1.flixcart.com/image/800/960/ke5zzbk0-0/sari/q/q/j/free-embroidery-saree-entaro-international-unstitched-original-imafuwkdh3fpeysj.jpeg?q=50'),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              width: 220.0,
+                              child: Text(
+                                'Explore Men | Navy ',
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                softWrap: false,
+                                style: const TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 25.0),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            const Text(
+                              '1 piece',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 92, 90, 90),
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 18.0),
+                            ),
+                            const SizedBox(
+                              height: 4,
+                            ),
+                            OrderText(data: 'Size: XL',color: Colors.grey,),
+                            const SizedBox(
+                              height: 10,
+                            ),
+
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment:
+                                  MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Container(
+                                      height: 40,
+                                      width: 40,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(width: 1.5,color: Colors.blue),
+                                        borderRadius: BorderRadius.circular(5),
+                                        color:const Color.fromARGB(255, 223, 240, 253)
+                                      ),
+                                      child: Center(
+                                        child: OrderText(data: '1'),
+                                      ),
+                                    ),
+                                    SizedBox(width: 8,),
+                                    OrderText(data: 'x ₹799',)
+                                  ],
+                                ),
+                                const SizedBox(
+                                  width: 95,
+                                ),
+                                OrderText(data: '₹799')
+                              ],
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                ]));
   }
 }

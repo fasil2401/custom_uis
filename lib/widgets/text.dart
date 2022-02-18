@@ -30,3 +30,16 @@ class ContentText extends StatelessWidget {
     );
   }
 }
+class OrderText extends StatelessWidget {
+  final String data;
+  Color? color;
+   OrderText({Key? key, required this.data,this.color}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      data,
+      style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400,color: color),
+    );
+  }
+}
