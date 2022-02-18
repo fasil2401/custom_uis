@@ -1,3 +1,4 @@
+import 'package:custom/screens/sixth.dart';
 import 'package:custom/widgets/catalogue_custom.dart';
 import 'package:custom/widgets/custom_row.dart';
 import 'package:custom/widgets/divider.dart';
@@ -13,7 +14,9 @@ class OrderPage extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>Catalogue()));
+          },
         ),
         title: const Text(
           'Order #1688068',

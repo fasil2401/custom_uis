@@ -1,3 +1,4 @@
+import 'package:custom/screens/second.dart';
 import 'package:custom/widgets/list_ile.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,9 @@ bool isSwitched = false;
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>ManageStore()));
+          },
         ),
         title: const Text('Additional Information',
         style: TextStyle(

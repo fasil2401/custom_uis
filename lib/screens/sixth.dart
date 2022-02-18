@@ -1,3 +1,4 @@
+import 'package:custom/screens/fourth.dart';
 import 'package:custom/widgets/catalogue_custom.dart';
 import 'package:custom/widgets/divider.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,9 @@ class _CatalogueState extends State<Catalogue> {
           ),
           centerTitle: true,
           actions: <Widget>[
-            IconButton(onPressed: () {}, icon: const Icon(Icons.search))
+            IconButton(onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>Sample2()));
+            }, icon: const Icon(Icons.search))
           ],
           bottom: const TabBar(
             tabs: <Widget>[

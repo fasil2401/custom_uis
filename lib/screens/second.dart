@@ -1,4 +1,5 @@
 import 'package:custom/screens/first.dart';
+import 'package:custom/screens/third.dart';
 import 'package:custom/widgets/bottom_navigation.dart';
 import 'package:custom/widgets/cards.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class ManageStore extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>AdditionalInformation()));
+            Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>Payments()));
           },
         ),
         title: const Text('Manage Store',

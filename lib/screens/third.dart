@@ -1,3 +1,4 @@
+import 'package:custom/screens/fifth.dart';
 import 'package:custom/screens/second.dart';
 import 'package:custom/widgets/button.dart';
 import 'package:custom/widgets/cards.dart';
@@ -17,7 +18,7 @@ class Payments extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>ManageStore()));
+            Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>OrderPage()));
           },
         ),
         title: const Text(

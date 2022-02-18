@@ -1,3 +1,4 @@
+import 'package:custom/widgets/button.dart';
 import 'package:custom/widgets/custom_row.dart';
 import 'package:custom/widgets/divider.dart';
 import 'package:custom/widgets/text.dart';
@@ -25,24 +26,120 @@ class Sample2 extends StatelessWidget {
                           width: double.infinity,
                           margin: EdgeInsets.only(top: 160),
                           
-                          height: 1000,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               HeadText(data: 'Features'),
-                             const SizedBox(height: 20,),
-                             const PremiumRow(icon: Icons.language, one: 'Custom domain name', two: 'Get your own domain and build \nyour brand on internet'),
-                            const SizedBox(height: 20,),
-                             const PremiumRow(icon: Icons.verified, one: 'Verified Seller badge', two: 'Get your own domain and build \nyour brand on internet'),
-                            const SizedBox(height: 20,),
-                             const PremiumRow(icon: Icons.laptop, one: 'Dukaan for PC', two: 'Get your own domain and build \nyour brand on internet'),
-                             const SizedBox(height: 20,),
-                             const PremiumRow(icon: Icons.mic, one: 'Priority Support', two: 'Get your own domain and build \nyour brand on internet'),
-                             const SizedBox(height: 20,),
-                             const DividerCustom(),
-                             const SizedBox(height: 20,),
-                             HeadText(data: 'Frequently asked questions')
-                            
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const PremiumRow(
+                                  icon: Icons.language,
+                                  one: 'Custom domain name',
+                                  two:
+                                      'Get your own domain and build \nyour brand on internet'),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const PremiumRow(
+                                  icon: Icons.verified,
+                                  one: 'Verified Seller badge',
+                                  two:
+                                      'Get your own domain and build \nyour brand on internet'),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const PremiumRow(
+                                  icon: Icons.laptop,
+                                  one: 'Dukaan for PC',
+                                  two:
+                                      'Get your own domain and build \nyour brand on internet'),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const PremiumRow(
+                                  icon: Icons.mic,
+                                  one: 'Priority Support',
+                                  two:
+                                      'Get your own domain and build \nyour brand on internet'),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const DividerCustom(),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              HeadText(data: 'What is Dukaan premium?'),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const CustomStack(),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const DividerCustom(),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              HeadText(data: 'Frequently asked questions'),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const FaqRow(
+                                  data:
+                                      'What types of business can use Dukaan \nPremium?',
+                                  icon: Icons.minimize),
+                              ContentText(
+                                data:
+                                    'Data are Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum tempor imperdiet. Fusce dignissim hendrerit pulvinar. Mauris tortor velit, congue id laoreet non, condimentum tempus lacus. Suspendisse potenti. Curabitur at augue condimentum, tincidunt nisl sed, blandit turpis. Morbi justo dui, finibus',
+                                color: Colors.grey,
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const DividerCustom(),
+                              const FaqRow(
+                                  data:
+                                      'What is your Refund policy',
+                                  icon: Icons.add),
+                                  const DividerCustom(),
+                                   const FaqRow(
+                                  data:
+                                      'What payment method do you offer',
+                                  icon: Icons.add),
+                                  const DividerCustom(),
+                                   const FaqRow(
+                                  data:
+                                      'What happens when free trial expires',
+                                  icon: Icons.add),
+                                  const DividerCustom(),
+                                   const FaqRow(
+                                  data:
+                                      'What are the terms of custom domain',
+                                  icon: Icons.add),
+                                  const DividerCustom(),
+                                  const SizedBox(
+                                height: 40,
+                              ),
+                              HeadText(data: 'Need Help? Get in touch',),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const HelpPremiumRow(),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const DividerCustom(),
+                              Padding(padding: EdgeInsets.symmetric(vertical: 30),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  TextButton(onPressed: (){}, 
+                                  child: OrderText(data: 'Select Domain',color: Colors.blue,)),
+                                  ButtonCustom(color: Colors.blue, paddingh: 35, paddingv: 20, font: 25, radius: 10, text: 'Get Premium')
+                                ],
+                              ),)
+
                             ],
                           ),
                         ),
