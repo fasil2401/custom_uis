@@ -172,3 +172,45 @@ class PaymentRow extends StatelessWidget {
               );
   }
 }
+class PremiumRow extends StatelessWidget {
+
+ final IconData icon;
+ final String one;
+ final String two;
+  const PremiumRow({ Key? key,required this.icon,required this.one,required this.two }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+                                children: [
+                                  Container(
+                                    height: 70,
+                                    width: 70,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(50),
+                                        border: Border.all(
+                                            width: 2, color: Colors.blue)),
+                                    child: Icon(
+                                      icon,
+                                      size: 50,
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 18),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        OrderText(data: one),
+                                        ContentText(
+                                          data:
+                                              two,
+                                          color: Colors.grey,
+                                        )
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              );
+  }
+}
