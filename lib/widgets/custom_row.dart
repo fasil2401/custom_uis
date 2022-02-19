@@ -186,14 +186,14 @@ class PremiumRow extends StatelessWidget {
     return Row(
       children: [
         Container(
-          height: 70,
-          width: 70,
+          height: 60,
+          width: 60,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50),
               border: Border.all(width: 2, color: Colors.blue)),
           child: Icon(
             icon,
-            size: 50,
+            size: 30,
             color: Colors.blue,
           ),
         ),
@@ -259,7 +259,8 @@ class CustomStack extends StatelessWidget {
 class FaqRow extends StatelessWidget {
   final String data;
   final IconData icon;
-  const FaqRow({Key? key,required this.data,required this.icon}) : super(key: key);
+  const FaqRow({Key? key, required this.data, required this.icon})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -270,7 +271,7 @@ class FaqRow extends StatelessWidget {
         children: [
           Text(
             data,
-            style:const TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
+            style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
           ),
           Icon(
             icon,
@@ -281,43 +282,58 @@ class FaqRow extends StatelessWidget {
     );
   }
 }
+
 class HelpPremiumRow extends StatelessWidget {
-  const HelpPremiumRow({ Key? key }) : super(key: key);
+  const HelpPremiumRow({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      border: Border.all(width: 1,color: Colors.grey),
-                                      borderRadius: BorderRadius.circular(8)
-                                    ),
-                                    child: Padding(padding: EdgeInsets.symmetric(vertical: 25,horizontal: 40),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.message_rounded,size: 50,color: Color.fromARGB(255, 114, 112, 112)),
-                                        SizedBox(height: 8,),
-                                        OrderText(data: 'Live Chat',color: Color.fromARGB(255, 114, 112, 112),)
-                                      ],
-                                    ),),
-                                  ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      border: Border.all(width: 1,color: Colors.grey),
-                                      borderRadius: BorderRadius.circular(8)
-                                    ),
-                                    child: Padding(padding: EdgeInsets.symmetric(vertical: 25,horizontal: 40),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.call,size: 50,color: Color.fromARGB(255, 114, 112, 112)),
-                                        SizedBox(height: 8,),
-                                        OrderText(data: 'Phone Call',color: Color.fromARGB(255, 114, 112, 112),)
-                                      ],
-                                    ),),
-                                  )
-                                ],
-                              );
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Container(
+          decoration: BoxDecoration(
+              border: Border.all(width: 1, color: Colors.grey),
+              borderRadius: BorderRadius.circular(8)),
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 25, horizontal: 50),
+            child: Column(
+              children: [
+                Icon(Icons.message_rounded,
+                    size: 50, color: Color.fromARGB(255, 114, 112, 112)),
+                SizedBox(
+                  height: 8,
+                ),
+                OrderText(
+                  data: 'Live Chat',
+                  color: Color.fromARGB(255, 114, 112, 112),
+                )
+              ],
+            ),
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+              border: Border.all(width: 1, color: Colors.grey),
+              borderRadius: BorderRadius.circular(8)),
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 25, horizontal: 48),
+            child: Column(
+              children: [
+                Icon(Icons.call,
+                    size: 50, color: Color.fromARGB(255, 114, 112, 112)),
+                SizedBox(
+                  height: 8,
+                ),
+                OrderText(
+                  data: 'Phone Call',
+                  color: Color.fromARGB(255, 114, 112, 112),
+                )
+              ],
+            ),
+          ),
+        )
+      ],
+    );
   }
 }

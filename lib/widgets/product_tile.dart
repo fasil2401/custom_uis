@@ -53,7 +53,7 @@ class ProductTile extends StatelessWidget {
                         Text(
                           'Order #$orderid',
                           style: const TextStyle(
-                            fontSize: 22,
+                            fontSize: 21,
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
                           ),

@@ -1,5 +1,6 @@
 import 'package:custom/screens/second.dart';
 import 'package:custom/widgets/list_ile.dart';
+import 'package:custom/widgets/text.dart';
 import 'package:flutter/material.dart';
 
 class AdditionalInformation extends StatefulWidget {
@@ -35,12 +36,12 @@ bool isSwitched = false;
            const ListTileCustom(
               text: 'Share Dukaan App',
               iconstart: Icons.share,
-              iconend: Icon(Icons.arrow_forward_ios, size: 20,),
+              iconend: Icon(Icons.arrow_forward_ios, size: 16,),
             ),
           const  ListTileCustom(
               text: 'Change Language',
               iconstart: Icons.mode_comment_outlined,
-              iconend: Icon(Icons.arrow_forward_ios, size: 20,),
+              iconend: Icon(Icons.arrow_forward_ios, size: 16,),
             ),
             ListTileCustom(
               text: 'WhatsApp Chat Support',
@@ -66,6 +67,16 @@ bool isSwitched = false;
               text: 'Sign Out',
               iconstart: Icons.logout
             ),
+            SizedBox(
+              height:360,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  ContentText(data: 'Version',color: Colors.grey,),
+                  ContentText(data: '2.4.3',color: Colors.grey,)
+                ],
+              ),
+            )
           ],
         ),
       ),

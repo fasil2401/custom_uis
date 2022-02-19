@@ -135,7 +135,7 @@ class Sample2 extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   TextButton(onPressed: (){}, 
-                                  child: OrderText(data: 'Select Domain',color: Colors.blue,)),
+                                  child: HeadText(data: 'Select Domain',color: Colors.blue,)),
                                   ButtonCustom(color: Colors.blue, paddingh: 35, paddingv: 20, font: 25, radius: 10, text: 'Get Premium')
                                 ],
                               ),)
@@ -177,15 +177,24 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
         ),
 
         Padding(
-          padding: const EdgeInsets.only(top: 20),
-          child: const Text(
-            "Dukaan Premium",
-            textAlign: TextAlign.center,
-            style: TextStyle(
+          padding: const EdgeInsets.only(top: 16,left: 10),
+          child:  Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(Icons.arrow_back,
               color: Colors.white,
-              fontWeight: FontWeight.w500,
-              fontSize: 28,
-            ),
+              ),
+              SizedBox(width: 75,),
+              Text(
+                "Dukaan Premium",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 28,
+                ),
+              ),
+            ],
           ),
         ),
         Positioned(

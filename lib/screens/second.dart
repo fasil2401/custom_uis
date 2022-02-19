@@ -29,7 +29,7 @@ class ManageStore extends StatelessWidget {
         child: GridView(
           gridDelegate:const SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 200,
-            mainAxisExtent: 135,
+            mainAxisExtent: 118,
             mainAxisSpacing: 10,
             crossAxisSpacing: 15
 

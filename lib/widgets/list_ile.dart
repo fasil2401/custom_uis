@@ -23,13 +23,13 @@ class _ListTileCustomState extends State<ListTileCustom> {
     return ListTile(
         leading: Icon(
           widget.iconstart,
-          size: 30,
+          size: 22,
           color: const Color.fromARGB(255, 75, 74, 74),
         ),
         title: Text(
           widget.text,
           style: const TextStyle(
-              fontSize: 23,
+              fontSize: 20,
               fontWeight: FontWeight.w400,
               color: Color.fromARGB(255, 59, 59, 59)),
         ),
@@ -60,7 +60,7 @@ class ListTuleCustomThird extends StatelessWidget {
     return ListTile(
       title: Text(
         title,
-        style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
       ),
       contentPadding: const EdgeInsets.only(left: 5.0, right: 0.0,top: 0.0,bottom: 0.0),
       trailing: Row(
@@ -69,7 +69,7 @@ class ListTuleCustomThird extends StatelessWidget {
         children: [
           Text(
             trailtext,
-            style: const TextStyle(fontSize: 18, color: Colors.grey),
+            style: const TextStyle(fontSize: 15, color: Colors.grey),
           ),
           IconButton(
               onPressed: () {},

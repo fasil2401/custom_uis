@@ -9,7 +9,7 @@ class HeadText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       data,
-      style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500,color: color),
+      style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500,color: color),
     );
   }
 }
@@ -25,7 +25,7 @@ class ContentText extends StatelessWidget {
       data,
       style: TextStyle(
           color: color,
-          fontSize: 20,
+          fontSize: 18,
           fontWeight: FontWeight.normal),
     );
   }
@@ -39,7 +39,7 @@ class OrderText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       data,
-      style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400,color: color),
+      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400,color: color),
     );
   }
 }

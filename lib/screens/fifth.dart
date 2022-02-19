@@ -40,7 +40,7 @@ class OrderPage extends StatelessWidget {
                 ),
                 icon: Icons.circle,
                 iconcolor: Colors.blue,
-                iconsize: 20,
+                iconsize: 16,
               ),
               const SizedBox(
                 height: 10,
@@ -59,7 +59,7 @@ class OrderPage extends StatelessWidget {
                   ),
                   icon: Icons.receipt_outlined,
                   iconcolor: Colors.blue,
-                  iconsize: 30,
+                  iconsize: 25,
                 ),
               ),
               const SizedBox(

@@ -29,21 +29,21 @@ class CardsCustom extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                width: 50,
-                height: 50,
+                width: 40,
+                height: 40,
                 child: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5), color: color),
                   child: Center(
                       child: Icon(
                     icon,
-                    size: 40,
+                    size: 30,
                     color: Colors.white,
                   )),
                 ),
               ),
               const SizedBox(
-                height: 5,
+                height: 10,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,12 +51,12 @@ class CardsCustom extends StatelessWidget {
                   Text(
                     text1,
                     style: const TextStyle(
-                        fontSize: 30, fontWeight: FontWeight.w400),
+                        fontSize: 24, fontWeight: FontWeight.w400),
                   ),
                   Text(
                     text2,
                     style: const TextStyle(
-                        fontSize: 30, fontWeight: FontWeight.w400),
+                        fontSize: 26, fontWeight: FontWeight.w400),
                   ),
                 ],
               )
