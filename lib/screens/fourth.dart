@@ -4,7 +4,18 @@ import 'package:custom/widgets/divider.dart';
 import 'package:custom/widgets/text.dart';
 import 'package:flutter/material.dart';
 
-class Sample2 extends StatelessWidget {
+class Sample2 extends StatefulWidget {
+  @override
+  State<Sample2> createState() => _Sample2State();
+}
+
+class _Sample2State extends State<Sample2> {
+  bool _customTileExpanded = false;
+  bool _customTileExpanded1 = false;
+  bool _customTileExpanded2 = false;
+  bool _customTileExpanded3 = false;
+  bool _customTileExpanded4 = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +36,6 @@ class Sample2 extends StatelessWidget {
                         Container(
                           width: double.infinity,
                           margin: EdgeInsets.only(top: 160),
-                          
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -85,43 +95,140 @@ class Sample2 extends StatelessWidget {
                               const SizedBox(
                                 height: 20,
                               ),
-                              const FaqRow(
-                                  data:
-                                      'What types of business can use Dukaan \nPremium?',
-                                  icon: Icons.minimize),
-                              ContentText(
-                                data:
-                                    'Data are Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum tempor imperdiet. Fusce dignissim hendrerit pulvinar. Mauris tortor velit, congue id laoreet non, condimentum tempus lacus. Suspendisse potenti. Curabitur at augue condimentum, tincidunt nisl sed, blandit turpis. Morbi justo dui, finibus',
-                                color: Colors.grey,
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
                               const DividerCustom(),
-                              const FaqRow(
-                                  data:
-                                      'What is your Refund policy',
-                                  icon: Icons.add),
-                                  const DividerCustom(),
-                                   const FaqRow(
-                                  data:
-                                      'What payment method do you offer',
-                                  icon: Icons.add),
-                                  const DividerCustom(),
-                                   const FaqRow(
-                                  data:
-                                      'What happens when free trial expires',
-                                  icon: Icons.add),
-                                  const DividerCustom(),
-                                   const FaqRow(
-                                  data:
-                                      'What are the terms of custom domain',
-                                  icon: Icons.add),
-                                  const DividerCustom(),
-                                  const SizedBox(
+                              ExpansionTile(
+                                title: const Text(
+                                  'What types of business can use Dukaan \nPremium?',
+                                  style: const TextStyle(
+                                      fontSize: 21,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                textColor: Colors.black,
+                                iconColor: Colors.black,
+                                trailing: Icon(
+                                  _customTileExpanded
+                                      ? Icons.minimize
+                                      : Icons.add,
+                                ),
+                                children: <Widget>[
+                                  Text(
+                                    'Data are Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum tempor imperdiet. Fusce dignissim hendrerit pulvinar. Mauris tortor velit, congue id laoreet non, condimentum tempus lacus. Suspendisse potenti. Curabitur at augue condimentum, tincidunt nisl sed, blandit turpis. Morbi justo dui, finibus',
+                                    style: TextStyle(color: Colors.grey),
+                                  )
+                                ],
+                                onExpansionChanged: (bool expanded) {
+                                  setState(
+                                      () => _customTileExpanded = expanded);
+                                },
+                              ),
+                             ExpansionTile(
+                                title: const Text(
+                                  'What is your Refund policy',
+                                  style: const TextStyle(
+                                      fontSize: 21,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                textColor: Colors.black,
+                                iconColor: Colors.black,
+                                trailing: Icon(
+                                  _customTileExpanded1
+                                      ? Icons.minimize
+                                      : Icons.add,
+                                ),
+                                children: <Widget>[
+                                  Text(
+                                    'Data are Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum tempor imperdiet. Fusce dignissim hendrerit pulvinar. Mauris tortor velit, congue id laoreet non, condimentum tempus lacus. Suspendisse potenti. Curabitur at augue condimentum, tincidunt nisl sed, blandit turpis. Morbi justo dui, finibus',
+                                    style: TextStyle(color: Colors.grey),
+                                  )
+                                ],
+                                onExpansionChanged: (bool expanded) {
+                                  setState(
+                                      () => _customTileExpanded1 = expanded);
+                                },
+                              ),
+                              ExpansionTile(
+                                title: const Text(
+                                  'What payment method do you offer',
+                                  style: const TextStyle(
+                                      fontSize: 21,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                textColor: Colors.black,
+                                iconColor: Colors.black,
+                                trailing: Icon(
+                                  _customTileExpanded2
+                                      ? Icons.minimize
+                                      : Icons.add,
+                                ),
+                                children: <Widget>[
+                                  Text(
+                                    'Data are Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum tempor imperdiet. Fusce dignissim hendrerit pulvinar. Mauris tortor velit, congue id laoreet non, condimentum tempus lacus. Suspendisse potenti. Curabitur at augue condimentum, tincidunt nisl sed, blandit turpis. Morbi justo dui, finibus',
+                                    style: TextStyle(color: Colors.grey),
+                                  )
+                                ],
+                                onExpansionChanged: (bool expanded) {
+                                  setState(
+                                      () => _customTileExpanded2 = expanded);
+                                },
+                              ),
+                              ExpansionTile(
+                                title: const Text(
+                                  'What happens when free trial expires',
+                                  style: const TextStyle(
+                                      fontSize: 21,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                textColor: Colors.black,
+                                iconColor: Colors.black,
+                                trailing: Icon(
+                                  _customTileExpanded3
+                                      ? Icons.minimize
+                                      : Icons.add,
+                                ),
+                                children: <Widget>[
+                                  Text(
+                                    'Data are Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum tempor imperdiet. Fusce dignissim hendrerit pulvinar. Mauris tortor velit, congue id laoreet non, condimentum tempus lacus. Suspendisse potenti. Curabitur at augue condimentum, tincidunt nisl sed, blandit turpis. Morbi justo dui, finibus',
+                                    style: TextStyle(color: Colors.grey),
+                                  )
+                                ],
+                                onExpansionChanged: (bool expanded) {
+                                  setState(
+                                      () => _customTileExpanded3 = expanded);
+                                },
+                              ),
+                              ExpansionTile(
+                                title: const Text(
+                                  'What are the terms of custom domain',
+                                  style: const TextStyle(
+                                      fontSize: 21,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                textColor: Colors.black,
+                                iconColor: Colors.black,
+                                trailing: Icon(
+                                  _customTileExpanded4
+                                      ? Icons.minimize
+                                      : Icons.add,
+                                ),
+                                children: <Widget>[
+                                  Text(
+                                    'Data are Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum tempor imperdiet. Fusce dignissim hendrerit pulvinar. Mauris tortor velit, congue id laoreet non, condimentum tempus lacus. Suspendisse potenti. Curabitur at augue condimentum, tincidunt nisl sed, blandit turpis. Morbi justo dui, finibus',
+                                    style: TextStyle(color: Colors.grey),
+                                  )
+                                ],
+                                onExpansionChanged: (bool expanded) {
+                                  setState(
+                                      () => _customTileExpanded4 = expanded);
+                                },
+                              ),
+
+                              const DividerCustom(),
+                              const SizedBox(
                                 height: 40,
                               ),
-                              HeadText(data: 'Need Help? Get in touch',),
+                              HeadText(
+                                data: 'Need Help? Get in touch',
+                              ),
                               const SizedBox(
                                 height: 20,
                               ),
@@ -130,16 +237,28 @@ class Sample2 extends StatelessWidget {
                                 height: 20,
                               ),
                               const DividerCustom(),
-                              Padding(padding: EdgeInsets.symmetric(vertical: 30),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  TextButton(onPressed: (){}, 
-                                  child: HeadText(data: 'Select Domain',color: Colors.blue,)),
-                                  ButtonCustom(color: Colors.blue, paddingh: 35, paddingv: 20, font: 25, radius: 10, text: 'Get Premium')
-                                ],
-                              ),)
-
+                              Padding(
+                                padding: EdgeInsets.symmetric(vertical: 30),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    TextButton(
+                                        onPressed: () {},
+                                        child: HeadText(
+                                          data: 'Select Domain',
+                                          color: Colors.blue,
+                                        )),
+                                    ButtonCustom(
+                                        color: Colors.blue,
+                                        paddingh: 35,
+                                        paddingv: 20,
+                                        font: 25,
+                                        radius: 10,
+                                        text: 'Get Premium')
+                                  ],
+                                ),
+                              )
                             ],
                           ),
                         ),
@@ -177,14 +296,17 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
         ),
 
         Padding(
-          padding: const EdgeInsets.only(top: 16,left: 10),
-          child:  Row(
+          padding: const EdgeInsets.only(top: 16, left: 10),
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(Icons.arrow_back,
-              color: Colors.white,
+              Icon(
+                Icons.arrow_back,
+                color: Colors.white,
               ),
-              SizedBox(width: 75,),
+              SizedBox(
+                width: 75,
+              ),
               Text(
                 "Dukaan Premium",
                 textAlign: TextAlign.center,
