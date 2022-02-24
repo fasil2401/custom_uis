@@ -45,7 +45,7 @@ bool isSwitched = false;
             ),
             ListTileCustom(
               text: 'WhatsApp Chat Support',
-              iconstart: Icons.whatshot,
+              iconstart: Icons.whatsapp,
               iconend: Switch(
               value: isSwitched,
               onChanged: (value) {

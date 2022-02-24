@@ -98,7 +98,7 @@ class _Sample2State extends State<Sample2> {
                               const DividerCustom(),
                               ExpansionTile(
                                 title: const Text(
-                                  'What types of business can use Dukaan \nPremium?',
+                                  'What types of business can use Dukaan Premium?',
                                   style: const TextStyle(
                                       fontSize: 21,
                                       fontWeight: FontWeight.w500),
